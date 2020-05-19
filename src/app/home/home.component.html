@@ -1,0 +1,12 @@
+<div class="cards-list">
+  
+    <div  *ngFor="let user of users; let i = index" class="card 1" (click)=delete(i)>
+      <div class="card_image"> <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" /> </div>
+      <div class="card_title title-white">
+        <p>{{user.username}}</p>
+      </div>
+    </div>
+    
+
+    
+    </div>

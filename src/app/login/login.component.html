@@ -1,0 +1,26 @@
+<div class="login-form">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="email" formControlName="username" placeholder="Username" autocomplete="nope">
+        </div>
+        <div class="input-field">
+          <input type="password" formControlName="password" placeholder="Password" autocomplete="new-password">
+        </div>
+      </div>
+      <div class="action">
+
+        <button type="submit" [disabled]="loginForm.invalid">Sign in</button>
+      </div>
+    </form>
+  </div>
+  <div align="center" class="row message" *ngIf="showMsg" >
+    <div class="col-xs-12">
+       <p class="alert alert-success">
+           <strong>Error</strong> {{msg}}
+
+       </p>
+    </div>
+  </div>
+  
