@@ -2,6 +2,9 @@
 FROM node:lts
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
+ENV API=
+ENV PORT=
+
 COPY package.json /app/package.json
 RUN npm install
 RUN npm install -g @angular/cli@9.0.1
