@@ -11,8 +11,9 @@ const {
   API,
   PORT,
 } = process.env;
-const apiUrl = `http://${API}:${PORT}/` ||'http://localhost:3000/';
+const apiUrl = `${API}:${PORT}/` ||'http://localhost:3000/';
 
+console.log(apiUrl);
 @Injectable({
   providedIn: 'root'
 })
