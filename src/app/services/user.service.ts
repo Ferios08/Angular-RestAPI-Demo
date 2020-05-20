@@ -7,7 +7,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-const API= 'backend';
+const API= 'http://backend';
 const PORT=3000;
 
 const apiUrl = `${API}:${PORT}/` ||'http://localhost:3000/';
