@@ -6,9 +6,12 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+const {
+  API,
+  PORT,
+} = process.env;
+const apiUrl = `http://${API}:${PORT}/` ||'http://localhost:3000/';
 
-// const apiUrl = `${SERVER_HOSTNAME}:${SERVER_PORT}`;
-const apiUrl = process.env.API ||'http://localhost:3000/';
 @Injectable({
   providedIn: 'root'
 })

@@ -9,4 +9,8 @@ RUN npm run build
 
 # stage 2
 FROM nginx
+# client is the app name
 COPY --from=node /app/dist/client /usr/share/nginx/html
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
