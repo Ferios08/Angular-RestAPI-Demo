@@ -26,8 +26,7 @@ import { environment } from 'src/environments/environment';
     AlertsModule.forRoot()
   ],
   providers: [
-    {provide: 'SERVER_HOSTNAME', useValue: environment.SERVER_HOSTNAME},
-  {provide: 'SERVER_PORT', useValue: environment.SERVER_PORT}
+ 
   ],
   bootstrap: [AppComponent]
 })

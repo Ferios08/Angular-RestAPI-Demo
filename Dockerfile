@@ -1,21 +1,13 @@
-# stage 1
-FROM node as node
+FROM node 
 WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm i @types/node
+RUN npm install -g @angular/cli
+
 ENV API=
 ENV PORT=
 
-RUN npm run build
+EXPOSE 4200
 
-
-################################
-
-# stage 2
-FROM nginx
-# client is the app name
-COPY --from=node /app/dist/client /usr/share/nginx/html
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ng serve --host 0.0.0.0

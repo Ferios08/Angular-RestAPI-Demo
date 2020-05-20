@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  SERVER_HOSTNAME:'$SERVER_HOSTNAME' ||  '172.30.218.204',
-  SERVER_PORT: '$SERVER_PORT' ||  '8000'
+
 };
 
 /*
