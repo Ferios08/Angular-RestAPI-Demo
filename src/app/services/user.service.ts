@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import * as process from 'process'
 import { Observable } from 'rxjs';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-const API= 'http://10.0.0.4';
-const PORT=3000;
+const API= 'http://172.18.0.3';
+const PORT='3000';
 
-const apiUrl = `${API}:${PORT}/` ||'http://localhost:3000/';
+const apiUrl = `${API}:${PORT}/`;
 
 console.log(apiUrl);
 @Injectable({
