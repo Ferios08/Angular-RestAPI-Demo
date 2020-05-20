@@ -3,11 +3,7 @@ FROM node:lts as node
 WORKDIR /app
 COPY . .
 RUN npm install
-RUN npm i @types/node
-
-
 RUN npm run build
-
 
 ################################
 
@@ -15,6 +11,5 @@ RUN npm run build
 FROM nginx
 # client is the app name
 COPY --from=node /app/dist/client /usr/share/nginx/html
-
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
