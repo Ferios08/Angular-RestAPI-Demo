@@ -3,7 +3,11 @@ FROM node as node
 WORKDIR /app
 COPY . .
 RUN npm install
+ENV API=
+ENV PORT=
+
 RUN npm run build
+
 
 ################################
 
