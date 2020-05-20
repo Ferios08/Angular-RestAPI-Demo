@@ -7,10 +7,9 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-const {
-  API,
-  PORT,
-} = process.env;
+const API= 'http://172.18.0.3';
+const PORT=3000;
+
 const apiUrl = `${API}:${PORT}/` ||'http://localhost:3000/';
 
 console.log(apiUrl);
