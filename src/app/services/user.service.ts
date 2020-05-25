@@ -6,7 +6,7 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-const API= 'http://40.115.42.230';
+const API= 'http://52.90.15.59';
 const PORT='3000';
 
 const apiUrl = `${API}:${PORT}/`;
